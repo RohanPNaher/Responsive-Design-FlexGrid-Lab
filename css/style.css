@@ -35,7 +35,7 @@ main {
   text-align: center;
   font-size: 2rem;
   display: grid;
-  grid-template-rows: 30px 200px 120px 2fr 2fr 1fr;
+  grid-template-rows: 30px auto auto auto auto 60px;
   grid-template-columns: 25% 50% 25%;
   grid-template-areas: 
   "status status status"
@@ -65,20 +65,30 @@ img {
 #name {
   grid-area: name;
   font-weight: bold;
+  margin: 5px 0;
 }
 
 #occupation {
   grid-area: job;
 }
 
+#occupation > p {
+  margin: 5px 0;
+}
+
 #brand {
   display: none;
   grid-area: brand;
+  background-color: gainsboro;
 }
 
 #offer {
   background-color: gainsboro;
   grid-area: offer;
+}
+
+#offer > p {
+  margin: 5px 0;
 }
 
 #contact {
@@ -111,20 +121,20 @@ img {
 @media only screen and (min-width: 1024px) {
   body {
     background-color: rgb(83, 83, 83);
-    
   }
   
   main {
     min-width: 1024px;
-    background-color: crimson;
     display: grid;
-    grid-template-columns: 20% 20% 60%;
+    grid-template-columns: 40% 60%;
     grid-template-rows: auto auto auto auto;
     grid-template-areas: 
-    "status status name"
-    "image image job"
-    "image image brand"
-    "contact contact offer";
+    "status name"
+    "image job"
+    "image brand"
+    "contact offer";
+    text-align: left;
+    margin: auto 0;
   }
 
   #status {
@@ -144,22 +154,45 @@ img {
   }
   
   #name {
+    background-color: gainsboro;
     grid-area: name;
-    font-weight: bold;
+    font-size: 5rem;
+    margin: auto 0;
+    padding: 0 0 0 20px;
   }
   
   #occupation {
+    
+    padding: 0 0 0 20px;
+    background-color: gainsboro;
     grid-area: job;
+    font-size: 3rem;
   }
   
+  #occupation > p {
+    margin: auto 0;
+  }
+
   #brand {
-    display: none;
+    display: flex;
+    align-items: center;
     grid-area: brand;
+    margin: 0;
+    padding: 0 0 0 20px;
+  }
+
+  #brand > p {
+    margin: auto 0;
   }
   
   #offer {
     background-color: gainsboro;
     grid-area: offer;
+    padding: 0 0 0 20px;
+  }
+
+  #offer > p {
+    margin: auto 0;
   }
   
   #contact {
