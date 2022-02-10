@@ -72,6 +72,7 @@ img {
 
 #occupation {
   grid-area: job;
+  background-color: gainsboro;
 }
 
 #occupation > p {
@@ -85,7 +86,6 @@ img {
 }
 
 #offer {
-  background-color: gainsboro;
   grid-area: offer;
 }
 
@@ -157,9 +157,7 @@ img {
   }
   
   #occupation {
-    
     padding: 0 0 0 20px;
-    background-color: gainsboro;
   }
   
   #occupation > p {
@@ -167,7 +165,6 @@ img {
   }
 
   #occupation > p:last-child {
-    
     font-size: 3rem;
   }
 
