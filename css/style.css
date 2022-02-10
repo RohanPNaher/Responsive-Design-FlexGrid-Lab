@@ -48,9 +48,10 @@ main {
 
 #status {
   text-align: end;
-  margin-right: 5px;
+  margin-right: 10px;
   grid-area: status;
-  color: grey
+  color: grey;
+  padding: 5px 0 5px 0;
 }
 
 main > div#img {
@@ -110,7 +111,7 @@ img {
 }
 
 #contact > p:last-child {
-  background-color: rgb(1, 155, 155);
+  background-color: #019b9b;
 }
 
 .flex-container {
@@ -125,8 +126,7 @@ img {
   }
   
   main {
-    max-width: 800px;
-    display: grid;
+    max-width: 700px;
     grid-template-columns: 40% 60%;
     grid-template-rows: auto auto auto 60px;
     grid-template-areas: 
@@ -140,11 +140,7 @@ img {
 
   #status {
     text-align: start;
-    color: grey;
     padding: 5px 0 0 15px;
-  }
-  
-  main > div#img {
   }
   
   img {
@@ -205,19 +201,5 @@ img {
     grid-area: contact;
     /* this should only show up if something breaks */
     background-color: rgb(0, 0, 255);
-  }
-  
-  #contact > p {
-    height: 100%;
-    width: 50%;
-    margin: 0 auto;
-  }
-  
-  #contact > p:first-child {
-    background-color: aqua;
-  }
-  
-  #contact > p:last-child {
-    background-color: rgb(1, 155, 155);
   }
 }
